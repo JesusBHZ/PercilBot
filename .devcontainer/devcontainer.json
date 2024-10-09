@@ -1,0 +1,18 @@
+{
+    "name": "demo_dev_container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:0.203-ubuntu22.04",
+    "features": {
+      "python": "3.11.9"
+    },
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y curl mariadb-server && pip install --upgrade pip && pip install -r requirements.txt && curl -fsSL https://ollama.com/install.sh | sh && sudo apt-get install -y docker.io && sudo service mariadb start && sleep 5 && sudo mysql < /workspaces/dev_container_demo/init.sql",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "cweijan.vscode-mysql-client",
+          "ms-python.python",
+          "ms-azuretools.vscode-docker",
+          "kevinrose.vsc-python-indent"
+        ]
+      }
+    }
+  }
