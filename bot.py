@@ -7,7 +7,7 @@ from clasificador import Clasificador as Clasificador
 
 clasificador = Clasificador()
 
-token = "6205486426:AAF5F-NuAs6uFgaQtb1S2jFArrKXdK07_UQ"
+token = "7845158062:AAF4Ycdd1sUpGNJJqDWJ0vFoCNuROrEg7WM"
 
 def start(bot,update):
     try:
